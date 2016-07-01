@@ -5,6 +5,7 @@ ORG_PATH="github.com/containernetworking"
 REPO_PATH="${ORG_PATH}/cni"
 
 if [ ! -h gopath/src/${REPO_PATH} ]; then
+	echo ${ORG_PATH}
 	mkdir -p gopath/src/${ORG_PATH}
 	ln -s ../../../.. gopath/src/${REPO_PATH} || exit 255
 fi
